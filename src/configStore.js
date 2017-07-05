@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import reducer, { initialNavState } from './reducer/index.js';
 const middlewares = [thunk];
 let middle;
-if (__DEV__ && window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) {
+if (__DEV__ && window.__REDUX_DEVTOOLS_EXTENSION__) {
   middle = compose(
     applyMiddleware(...middlewares),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
