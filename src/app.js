@@ -3,15 +3,20 @@ import {
   AppRegistry,
   View,
   Text
-} from 'react-native';
+} from 'react-native'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import AppWithNav from './root.js'
+import configStore from './configStore.js'
+const store = configStore()
 class App extends Component {
   render() {
     return (
-        <View>
-            <Text>hah</Text>
-        </View>
-    );
+      <Provider store={store}>
+        <AppWithNav />
+      </Provider>
+    )
   }
 }
 
-AppRegistry.registerComponent('MICRN', () => App);
+AppRegistry.registerComponent('MICRN', () => App)
