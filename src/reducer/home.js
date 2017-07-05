@@ -1,5 +1,5 @@
 const initialState = { 
-    status: 'show'
+    status: 'hide'
 }
 
 export default (state = initialState, action) => {
