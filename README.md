@@ -86,4 +86,19 @@ my-project
 ├── package.json
 ├── yarn.lock
 ```
-### 3.2、目录规范1. container 目录下有一个业务建一个子文件夹, 文件夹以驼峰命名, 其他文件也以驼峰命名2. components 目录下也分别建子文件夹, 文件夹以驼峰命名,其他文件也以驼峰命名
+### 3.2、目录规范1. container 目录下有一个业务建一个子文件夹, 文件夹以驼峰命名, 其他文件也以驼峰命名2. components 目录下也分别建子文件夹, 文件夹以驼峰命名,其他文件也以驼峰命名
+
+## 4、我要开发Template
+
+如果我们想要开发或者更新Template该怎么办？<br>
+1.通过Template构建测试项目，在这个项目中开发您的代码<br>
+2.开发完之后，将测试项目所有的依赖正确添加到Template项目的dependencies.json和devDependencies.json中，如果需要增加测试页面，请将相关文件也拷贝到Template项目中，⚠️一定要确认无误方可提交，并且发布。<br>
+3.更新package.json中的版本号，提交代码<br>
+4.命令行执行
+
+```
+npm publish
+
+```
+5.enjoy it
+
