@@ -1,30 +1,43 @@
 # ReactNative前端开发者
 
-文档版本0.0.1<br>
+文档版本0.0.1
 
 Author: Necfol
 
 说明: 本文档用于指导前端React Native的开发，如需开发其他其他框架应用，不适用本文档
 ## 前期准备
-1. ReactNative 的基本概念[ReactNative文档](https://facebook.github.io/react-native/docs/getting-started.html)2. es6 开发基本知识 [es6 基本文档](http://es6.ruanyifeng.com/)3. Node 环境(Node >=5.0.0，Yarn)[下载地址](https://nodejs.org/zh-cn/)4. Android Studio环境[Android Studio](https://developer.android.com/studio/install.html?hl=zh-cn)
+1. ReactNative 的基本概念[ReactNative文档](https://facebook.github.io/react-native/docs/getting-started.html)
+2. es6 开发基本知识 [es6 基本文档](http://es6.ruanyifeng.com/)
+3. Node 环境(Node >=5.0.0，Yarn)[下载地址](https://nodejs.org/zh-cn/)
+4. Android Studio环境[Android Studio](https://developer.android.com/studio/install.html?hl=zh-cn)
 5. Xcode 环境（Mac适用）
-## 1、搭建脚手架
+
+## 1、搭建脚手架
 ### 1.1、安装脚手架工具
 通过 npm 安装 React Native 脚手架命令行工具
 
 ```
-npm install -g react-native-cli --registry=https://registry.npm.taobao.org
+npm install -g yarn react-native-cli
 
 ```
 ### 1.2、初始化脚手架
+
+由于官方RN0.45版本有问题，推荐使用0.44.3稳定版本
 ```
-$ React Native init ${your_project} --template micrn
+$ react-native init ${your_project} --template micrn --version 0.44.3
 
 ```
-如果需要特定版本则需要：
+如果需要特定版本则：
 
 ```
-$ React Native init ${your_project} --template micrn --version ${version}
+$ react-native init ${your_project} --template micrn --version ${version}
+
+```
+
+如果需要最新版本则：
+
+```
+$ react-native init ${your_project} --template micrn --version
 
 ```
 
@@ -86,7 +99,9 @@ my-project
 ├── package.json
 ├── yarn.lock
 ```
-### 3.2、目录规范1. container 目录下有一个业务建一个子文件夹, 文件夹以驼峰命名, 其他文件也以驼峰命名2. components 目录下也分别建子文件夹, 文件夹以驼峰命名,其他文件也以驼峰命名
+### 3.2、目录规范
+1. container 目录下有一个业务建一个子文件夹, 文件夹以驼峰命名, 其他文件也以驼峰命名
+2. components 目录下也分别建子文件夹, 文件夹以驼峰命名,其他文件也以驼峰命名
 
 ## 4、我要开发Template
 
@@ -101,4 +116,4 @@ npm publish
 
 ```
 5.enjoy it
-
+
