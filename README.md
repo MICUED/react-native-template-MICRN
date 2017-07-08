@@ -1,8 +1,8 @@
 # ReactNative前端开发者
 
-文档版本0.0.1
+文档版本0.0.2
 
-Author: Necfol
+[Author: Necfol](https://github.com/necfol)
 
 说明: 本文档用于指导前端React Native的开发，如需开发其他其他框架应用，不适用本文档
 ## 前期准备
@@ -58,7 +58,8 @@ ios(Mac环境): react-native run-ios
 android: react-native run-android
 
 ```
-安卓在运行项目之前，需要先打开Android Studio运行安卓模拟器！！!安卓第一次运行的时候，命令行下载依赖可能比较慢，可以参考[安装](https://reactnative.cn/docs/0.46/getting-started.html#content)，通过Android Studio进行快速安装依赖。
+安卓在运行项目之前，需要先打开Android Studio运行安卓模拟器！！!即AVD Manager.
+安卓第一次运行的时候，命令行下载依赖可能比较慢，可以参考[安装](https://reactnative.cn/docs/0.46/getting-started.html#content)，通过Android Studio进行快速安装依赖。
 项目启动在ios模拟器，或者安卓模拟器上，并且会打开命令行运行构建服务，⚠️不能把进程杀掉！
 可以通过chrome 安装调试工具，或者[安装react-native-debugger](https://github.com/jhen0409/react-native-debugger)，再或者[React Developer Tools](https://facebook.github.io/react-native/docs/debugging.html)。
 
