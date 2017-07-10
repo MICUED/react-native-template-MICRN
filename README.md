@@ -76,6 +76,7 @@ my-project
 │   │     └── home.js //home的action
 │   │     └── type //存放action type的文件夹
 │   └── components //页面级别的公用组件, 例如在某个项目里共同使用的用户信息展示, 某些共用的复杂弹窗等等
+│   │     └── QRScan.js //二维码/条形码扫描
 │   └── container //业务模块文件夹, 按照业务逻辑区分的业务模块文件夹
 │   │     └── Home.js //首页
 │   └── reducer //redux中放置reducer的文件夹
