@@ -119,3 +119,20 @@ npm publish
 ```
 5.enjoy it
 
+## 5、组件使用提示
+
+1. 扫一扫<br>
+使用iOS 10或者更高版本时，需要在项目info.plist中增加相机使用权限，该文件在'your_project/ios/your_project/Info.plist'，请增加以下代码:
+
+```
+<key>NSCameraUsageDescription</key>
+<string>Your message to user when the camera is accessed for the first time</string>
+
+<!-- Include this only if you are planning to use the camera roll -->
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Your message to user when the photo library is accessed for the first time</string>
+
+<!-- Include this only if you are planning to use the microphone for video recording -->
+<key>NSMicrophoneUsageDescription</key>
+<string>Your message to user when the microsphone is accessed for the first time</string>
+```
