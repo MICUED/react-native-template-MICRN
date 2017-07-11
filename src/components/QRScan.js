@@ -267,7 +267,7 @@ export default class QRScan extends Component {
         return (
             <View style={{flex: 1}}>
                 <Camera
-                    onBarCodeRead={this.props.onScanResultReceived}
+                    onBarCodeRead={this.props.onScanResultReceived.bind(this)}
                     style={{flex: 1}}
                 >
                     {this.props.topView}
