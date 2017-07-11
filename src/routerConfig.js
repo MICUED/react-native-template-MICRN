@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { StackNavigator } from 'react-navigation'
 import HomeScreen from './container/Home.js'
-import QRScanScreen from './container/QRScan.js'
 const paramsToProps = (SomeComponent) => { 
     return class extends Component {
         static navigationOptions = SomeComponent.navigationOptions
@@ -14,8 +13,7 @@ const paramsToProps = (SomeComponent) => {
 }
 
 export const AppNavigator = StackNavigator({
-    Home: { screen: paramsToProps(HomeScreen) },
-    QRScan: {screen: paramsToProps(QRScanScreen)},
+    Home: { screen: paramsToProps(HomeScreen) }
   },{
     transitionConfig: () => ({
         screenInterpolator: sceneProps => {
