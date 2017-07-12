@@ -136,3 +136,27 @@ npm publish
 <key>NSMicrophoneUsageDescription</key>
 <string>Your message to user when the microsphone is accessed for the first time</string>
 ```
+
+2. 图片缓存<br>
+第一次使用图片缓存时需要运行
+
+```
+RNFB_ANDROID_PERMISSIONS=true react-native link react-native-fetch-blob
+```
+并且在项目android/app/src/AndroidManifest.xml中添加
+
+```
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+```
+之后使用图片缓存即可按照文档来[react-native-cached-image](https://github.com/kfiroo/react-native-cached-image)
+
+⚠️如果ios加载图片必须是https<br>
+⚠️对于安卓加载gif图片，需要在项目的/android/app/build.gradle的dependencies中添加
+
+```
+dependencies {
+    compile 'com.facebook.fresco:animated-base-support:0.14.1'
+    compile 'com.facebook.fresco:animated-gif:0.14.1'
+}
+```
+之后重新运行 react-native run-android
