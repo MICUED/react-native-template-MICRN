@@ -151,7 +151,7 @@ RNFB_ANDROID_PERMISSIONS=true react-native link react-native-fetch-blob
 之后使用图片缓存即可按照文档来[react-native-cached-image](https://github.com/kfiroo/react-native-cached-image)
 
 ⚠️如果ios加载图片必须是https<br>
-⚠️对于安卓加载gif图片，需要在项目的/android/app/build.gradle的dependencies中添加
+⚠️对于安卓加载gif图片，需要在项目的/android/app/build.gradle的dependencies中添加
 
 ```
 dependencies {
