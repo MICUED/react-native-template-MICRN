@@ -1,4 +1,4 @@
-import { AppNavigator } from '../routerConfig.js'
+import { AppNavigator } from "../routerConfig.js"
 export default (state, action) => {
-  return AppNavigator.router.getStateForAction(action, state) || state
+    return AppNavigator.router.getStateForAction(action, state) || state
 }

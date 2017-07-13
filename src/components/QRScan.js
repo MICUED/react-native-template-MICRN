@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Camera from 'react-native-camera'
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import Camera from "react-native-camera"
 import
 {
     ActivityIndicator,
@@ -9,78 +10,78 @@ import
     Animated,
     Easing,
     Text
-} from 'react-native'
+} from "react-native"
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
+        alignItems: "center",
+        justifyContent: "center",
+        position: "absolute",
         top: 0,
         right: 0,
         left: 0,
         bottom: 0
     },
     topView: {
-        position: 'absolute',
+        position: "absolute",
         top: 0
     },
     rightView: {
-        position: 'absolute',
+        position: "absolute",
         right: 0
     },
     bottomView: {
-        position: 'absolute',
+        position: "absolute",
         bottom: 0
     },
     leftView: {
-        position: 'absolute',
+        position: "absolute",
         left: 0
     },
     scanView: {
-        alignItems: 'center',
-        justifyContent: 'center'
+        alignItems: "center",
+        justifyContent: "center"
     },
     topLeftCorner: {
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0
     },
     bottomLeftCorner: {
-        position: 'absolute',
+        position: "absolute",
         bottom: 0,
         left: 0
     },
     topRightCorner: {
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         right: 0
     },
     bottomRightCorner: {
-        position: 'absolute',
+        position: "absolute",
         bottom: 0,
         right: 0
     }
 })
 class QRScanInnerView extends Component {
     static defaultProps = {
-        maskColor: 'rgba(0,0,0,0.5)',
-        cornerColor: '#d92121',
-        borderColor: '#000',
+        maskColor: "rgba(0,0,0,0.5)",
+        cornerColor: "#d92121",
+        borderColor: "#000",
         rectHeight: 200,
         rectWidth: 250,
         borderWidth: 0,
         cornerWidth: 4,
         cornerLength: 20,
         scanBarAnimateTime: 4000,
-        scanBarColor: '#e64545',
+        scanBarColor: "#e64545",
         scanBarHeight: 1.5,
         scanBarMargin: 6,
-        hintText: '扫描二维码/条码',
+        hintText: "扫描二维码/条码",
         hintTextStyle: {
-            color: '#fff', 
+            color: "#fff", 
             fontSize: 14,
-            backgroundColor:'transparent'
+            backgroundColor:"transparent"
         },
         hintTextPosition: 130,
     }
@@ -88,7 +89,7 @@ class QRScanInnerView extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            topWidth: Dimensions.get('window').width,
+            topWidth: Dimensions.get("window").width,
             topHeight: 0,
             leftWidth: 0,
             animateVal: new Animated.Value(0),
@@ -112,14 +113,14 @@ class QRScanInnerView extends Component {
             <View
                 style={[styles.container]}>
                 <View style={[styles.scanView, {height: this.props.rectHeight,width: this.props.rectWidth}]}
-                      onLayout={({nativeEvent: event}) => this.calRectPosition(event)}
+                    onLayout={({nativeEvent: event}) => this.calRectPosition(event)}
                 >
                     <View style={{
-                            height: this.props.rectHeight,
-                            width: this.props.rectWidth,
-                            borderWidth: this.props.borderWidth,
-                            borderColor: this.props.borderColor
-                        }}>
+                        height: this.props.rectHeight,
+                        width: this.props.rectWidth,
+                        borderWidth: this.props.borderWidth,
+                        borderColor: this.props.borderColor
+                    }}>
 
                         <Animated.View
                             style={[
@@ -216,7 +217,7 @@ class QRScanInnerView extends Component {
                         top: this.state.topHeight + this.props.rectHeight,
                         width: this.state.topWidth,
                     }]}/>
-                <View style={{position: 'absolute', bottom: this.props.hintTextPosition}}>
+                <View style={{position: "absolute", bottom: this.props.hintTextPosition}}>
                     <Text style={this.props.hintTextStyle}>{this.props.hintText}</Text>
                 </View>
             </View>
@@ -238,26 +239,26 @@ class QRScanInnerView extends Component {
 }
 export default class QRScan extends Component {
     static propTypes = {
-        maskColor: React.PropTypes.string,
-        borderColor: React.PropTypes.string,
-        cornerColor: React.PropTypes.string,
-        borderWidth: React.PropTypes.number,
-        cornerWidth: React.PropTypes.number,
-        cornerLength: React.PropTypes.number,
-        rectHeight: React.PropTypes.number,
-        rectWidth: React.PropTypes.number,
-        bottomMenuHeight: React.PropTypes.number,
-        scanBarAnimateTime: React.PropTypes.number,
-        scanBarColor: React.PropTypes.string,
-        scanBarHeight: React.PropTypes.number,
-        scanBarMargin: React.PropTypes.number,
-        hintText: React.PropTypes.string,
-        hintTextStyle: React.PropTypes.object,
-        hintTextPosition:React.PropTypes.number,
-        onScanResultReceived:React.PropTypes.func,
-        textView: React.PropTypes.func,
-        topView: React.PropTypes.func,
-        bottomView: React.PropTypes.func
+        maskColor: PropTypes.string,
+        borderColor: PropTypes.string,
+        cornerColor: PropTypes.string,
+        borderWidth: PropTypes.number,
+        cornerWidth: PropTypes.number,
+        cornerLength: PropTypes.number,
+        rectHeight: PropTypes.number,
+        rectWidth: PropTypes.number,
+        bottomMenuHeight: PropTypes.number,
+        scanBarAnimateTime: PropTypes.number,
+        scanBarColor: PropTypes.string,
+        scanBarHeight: PropTypes.number,
+        scanBarMargin: PropTypes.number,
+        hintText: PropTypes.string,
+        hintTextStyle: PropTypes.object,
+        hintTextPosition:PropTypes.number,
+        onScanResultReceived:PropTypes.func,
+        textView: PropTypes.func,
+        topView: PropTypes.func,
+        bottomView: PropTypes.func
     }
 
     constructor(props) {
