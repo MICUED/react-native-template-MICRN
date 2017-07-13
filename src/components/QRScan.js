@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types"
 import Camera from 'react-native-camera'
 import
 {
@@ -238,26 +239,26 @@ class QRScanInnerView extends Component {
 }
 export default class QRScan extends Component {
     static propTypes = {
-        maskColor: React.PropTypes.string,
-        borderColor: React.PropTypes.string,
-        cornerColor: React.PropTypes.string,
-        borderWidth: React.PropTypes.number,
-        cornerWidth: React.PropTypes.number,
-        cornerLength: React.PropTypes.number,
-        rectHeight: React.PropTypes.number,
-        rectWidth: React.PropTypes.number,
-        bottomMenuHeight: React.PropTypes.number,
-        scanBarAnimateTime: React.PropTypes.number,
-        scanBarColor: React.PropTypes.string,
-        scanBarHeight: React.PropTypes.number,
-        scanBarMargin: React.PropTypes.number,
-        hintText: React.PropTypes.string,
-        hintTextStyle: React.PropTypes.object,
-        hintTextPosition:React.PropTypes.number,
-        onScanResultReceived:React.PropTypes.func,
-        textView: React.PropTypes.func,
-        topView: React.PropTypes.func,
-        bottomView: React.PropTypes.func
+        maskColor: PropTypes.string,
+        borderColor: PropTypes.string,
+        cornerColor: PropTypes.string,
+        borderWidth: PropTypes.number,
+        cornerWidth: PropTypes.number,
+        cornerLength: PropTypes.number,
+        rectHeight: PropTypes.number,
+        rectWidth: PropTypes.number,
+        bottomMenuHeight: PropTypes.number,
+        scanBarAnimateTime: PropTypes.number,
+        scanBarColor: PropTypes.string,
+        scanBarHeight: PropTypes.number,
+        scanBarMargin: PropTypes.number,
+        hintText: PropTypes.string,
+        hintTextStyle: PropTypes.object,
+        hintTextPosition:PropTypes.number,
+        onScanResultReceived:PropTypes.func,
+        textView: PropTypes.func,
+        topView: PropTypes.func,
+        bottomView: PropTypes.func
     }
 
     constructor(props) {
