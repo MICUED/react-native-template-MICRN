@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { StackNavigator } from 'react-navigation'
+import React, { Component } from "react"
+import { StackNavigator } from "react-navigation"
 import CardStackStyleInterpolator from "react-navigation/src/views/CardStackStyleInterpolator"
-import HomeScreen from './container/Home.js'
+import HomeScreen from "./container/Home.js"
 const paramsToProps = (SomeComponent) => { 
     return class extends Component {
         static navigationOptions = SomeComponent.navigationOptions

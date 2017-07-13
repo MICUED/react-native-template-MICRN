@@ -1,4 +1,16 @@
 {
   "name": "react-native-template-micrn",
-  "version": "0.1.6"
+  "version": "0.1.6",
+  "scripts": {
+    "lint": "eslint 'src/**/*.@(js|jsx)' --fix"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.2.0",
+    "eslint-plugin-react": "^7.1.0",
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }
