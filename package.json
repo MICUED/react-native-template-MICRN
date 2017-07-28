@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-micrn",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "scripts": {
     "lint": "eslint 'src/**/*.@(js|jsx)' --fix"
   },
