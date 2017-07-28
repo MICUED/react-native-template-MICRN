@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { StackNavigator } from "react-navigation"
-import CardStackStyleInterpolator from "react-navigation/src/views/CardStackStyleInterpolator"
 import HomeScreen from "./container/Home.js"
 const paramsToProps = (SomeComponent) => { 
     return class extends Component {
@@ -19,8 +18,23 @@ const routes = {
 const stackNavigatorConfig = {
     mode: "card",
     headerMode: "none",
-    transitionConfig: (() => ({
-        screenInterpolator: CardStackStyleInterpolator.forHorizontal
-    }))
+    transitionConfig: () => ({
+        screenInterpolator: sceneProps => {
+            const { layout, position, scene } = sceneProps
+            const { index } = scene
+
+            const translateX = position.interpolate({
+                inputRange: [index - 1, index, index + 1],
+                outputRange: [layout.initWidth, 0, 0]
+            })
+
+            const opacity = position.interpolate({
+                inputRange: [index - 1, index - 0.99, index, index + 0.99, index + 1],
+                outputRange: [0, 1, 1, 0.3, 0]
+            })
+
+            return { opacity, transform: [{ translateX }] }
+        }
+    })
 }
 export const AppNavigator = StackNavigator(routes, stackNavigatorConfig)
